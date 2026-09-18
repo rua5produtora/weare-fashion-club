@@ -68,5 +68,8 @@ for (const relative of previous) {
   await rmdir(directory);
 }
 await writeFile(manifestPath, JSON.stringify(directories, null, 2));
+const sitemapPages = ['', 'eventos/', 'journal/', 'events/', ...directories.map(path => `${path}/`)];
+await writeFile(join(base, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemapPages.map(path => `<url><loc>${esc(new URL(path, site).href)}</loc></url>`).join('')}</urlset>\n`);
+await writeFile(join(base, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: ${new URL('sitemap.xml', site).href}\n`);
 console.log(`Built ${directories.length} published story pages.`);
 

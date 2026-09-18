@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Sitemap: https://rua5produtora.github.io/weare-fashion-club/sitemap.xml
+

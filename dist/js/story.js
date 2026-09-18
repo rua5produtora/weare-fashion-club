@@ -33,6 +33,22 @@ dialog.addEventListener('touchend', event => {
   const distance = event.changedTouches[0].clientX - touchStart;
   if (Math.abs(distance) > 45) show(position + (distance < 0 ? 1 : -1));
 }, { passive:true });
+download.addEventListener('click', async event => {
+  if (download.hidden) return;
+  event.preventDefault();
+  try {
+    const response = await fetch(gallery[position].src);
+    if (!response.ok) throw new Error('Imagem indisponível');
+    const objectUrl = URL.createObjectURL(await response.blob());
+    const link = document.createElement('a');
+    link.href = objectUrl;
+    link.download = download.download;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
+  } catch { window.open(gallery[position].src, '_blank', 'noopener'); }
+});
 document.querySelector('[data-share="native"]')?.addEventListener('click', async () => {
   if (navigator.share) { try { await navigator.share({ title:document.title, url:location.href }); } catch {} }
   else { await navigator.clipboard.writeText(location.href); alert('Link copiado.'); }
