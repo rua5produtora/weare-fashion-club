@@ -1,4 +1,6 @@
 work/
 outputs/
 .sites-runtime/
+.env.local
+dist/js/config.js
 
