@@ -29,12 +29,13 @@ function card(story, media) {
   const cover = media.get(story.cover_media_id);
   const image = document.createElement('img');
   image.loading = 'lazy';
-  image.alt = cover?.alt_text || story.title;
-  if (cover) image.src = publicImage(cover.thumbnail_path || cover.path);
+  image.alt = story.image_alt || cover?.alt_text || story.title;
+  if (story.demoImage) image.src = new URL(`images/${story.demoImage}`, root);
+  else if (cover) image.src = publicImage(cover.thumbnail_path || cover.path);
   link.append(image);
   const meta = document.createElement('p');
   meta.className = 'story-card-meta';
-  meta.textContent = `${story.kind === 'event' ? 'EVENTOS' : story.category} — ${dateLabel(story.story_date)}`;
+  meta.textContent = story.demoImage ? `EXEMPLO · ${story.category}` : `${story.kind === 'event' ? 'EVENTOS' : story.category} — ${dateLabel(story.story_date)}`;
   link.append(meta);
   const title = document.createElement('h3');
   title.textContent = story.title;
@@ -63,9 +64,14 @@ async function render() {
       latest.hidden = false;
     }
     if (journal) {
+      const publishedPosts = stories.filter(row => row.kind === 'post');
+      const demoRows = publishedPosts.length ? [] : (await (await fetch(new URL('data/demo-posts.json', root))).json()).map(row => ({ ...row, kind:'post', demoImage:row.cover_image }));
+      const journalStories = [...stories, ...demoRows];
+      const demoNote = document.getElementById('journal-demo-note');
+      if (demoNote) demoNote.hidden = demoRows.length === 0;
       const status = document.getElementById('journal-status');
       const draw = filter => {
-        const chosen = filter === 'TODOS' ? stories : stories.filter(row => filter === 'EVENTOS' ? row.kind === 'event' || row.category === 'EVENTOS' : row.kind === 'post' && row.category === filter);
+        const chosen = filter === 'TODOS' ? journalStories : journalStories.filter(row => filter === 'EVENTOS' ? row.kind === 'event' || row.category === 'EVENTOS' : row.kind === 'post' && row.category === filter);
         journal.replaceChildren(...chosen.map(row => card(row, media)));
         if (chosen.length) status.hidden = true;
         else empty(status, 'Ainda não há histórias nesta categoria. Volte em breve.');

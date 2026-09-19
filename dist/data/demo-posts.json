@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "entre-formas-e-silencios",
+    "title": "Entre formas e silêncios",
+    "subtitle": "Um olhar sobre movimento, matéria e presença.",
+    "category": "EDITORIAL",
+    "cover_image": "editorial-01.jpg",
+    "image_alt": "Editorial de moda em preto e branco com modelo em movimento",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae sem non neque cursus finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nSed posuere, ipsum sed consequat luctus, arcu nulla fermentum neque, vitae malesuada purus mi sed justo. Donec at erat non magna vulputate placerat. Curabitur feugiat, lacus vitae tempus congue, magna massa efficitur nibh, sed varius justo libero vitae odio.\n\nPraesent ornare, ex eget ullamcorper feugiat, neque risus gravida enim, ac dictum est mauris in erat. Aliquam erat volutpat. Nulla facilisi."
+  },
+  {
+    "slug": "o-gesto-da-moda",
+    "title": "O gesto da moda",
+    "subtitle": "Texturas que contam histórias antes das palavras.",
+    "category": "EDITORIAL",
+    "cover_image": "editorial-02.jpg",
+    "image_alt": "Modelo em cenário arquitetônico fotografada em preto e branco",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor, augue sed varius tincidunt, dolor ligula dictum turpis, at convallis est sem eu massa.\n\nSuspendisse potenti. Aenean consequat, sapien vitae luctus interdum, nulla magna hendrerit arcu, id sodales elit erat non purus. Morbi vitae nisl ut urna laoreet eleifend sed sit amet tortor.\n\nDonec egestas arcu vel sem porta, nec sagittis nunc pharetra. Nam vel ligula ac nunc maximus tincidunt. In hac habitasse platea dictumst."
+  },
+  {
+    "slug": "cidade-em-cena",
+    "title": "Cidade em cena",
+    "subtitle": "A rua como passarela, a imagem como linguagem.",
+    "category": "NEWS",
+    "cover_image": "editorial-04.jpg",
+    "image_alt": "Editorial de moda ao ar livre em cenário urbano",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue mauris eget orci pretium, non bibendum leo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.\n\nNunc imperdiet lectus et ligula tempor, eget suscipit nibh ullamcorper. Quisque vitae eros in lorem sollicitudin eleifend. Phasellus ac diam sed ligula consequat consequat.\n\nEtiam vulputate magna ut blandit maximus. Fusce id nibh vel metus volutpat iaculis. Donec quis leo sed sapien elementum tincidunt."
+  },
+  {
+    "slug": "novos-angulos",
+    "title": "Novos ângulos",
+    "subtitle": "Perspectivas inesperadas para uma mesma história.",
+    "category": "EDITORIAL",
+    "cover_image": "editorial-05.jpg",
+    "image_alt": "Retrato editorial em cenário de arquitetura contemporânea",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget libero nec nunc placerat commodo. Sed eget arcu mauris. Cras eget vestibulum risus, eu tincidunt tellus.\n\nVestibulum bibendum nunc vel mauris iaculis, id euismod enim ultricies. Proin auctor nulla vel est egestas, ut maximus libero mattis. Curabitur dictum justo sed libero posuere, vel vulputate ante ultricies.\n\nNam ac lectus at nibh feugiat vehicula. Integer luctus ex ac sapien sodales, id dignissim sem hendrerit."
+  },
+  {
+    "slug": "detalhes-que-ficam",
+    "title": "Detalhes que ficam",
+    "subtitle": "Objetos, memória e o prazer de observar de perto.",
+    "category": "NEWS",
+    "cover_image": "bag.jpg",
+    "image_alt": "Bolsa de moda fotografada em close sob luz verde",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Sed facilisis feugiat sem, vitae dignissim nulla tempor nec.\n\nPellentesque id leo in lacus finibus dictum. Duis ultricies, lorem at facilisis lacinia, lectus felis volutpat purus, in convallis augue tortor a arcu.\n\nNullam vehicula lorem at ex fermentum, non scelerisque ante laoreet. Ut tincidunt leo eget nibh convallis, vitae finibus justo posuere."
+  }
+]
+
