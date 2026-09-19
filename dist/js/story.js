@@ -1,3 +1,5 @@
+import './mobile-menu.js';
+
 const gallery = JSON.parse(document.getElementById('gallery-data')?.textContent || '[]');
 const dialog = document.querySelector('.gallery-lightbox');
 const preview = dialog.querySelector('.lightbox-image');

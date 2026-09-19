@@ -1,3 +1,4 @@
+import './mobile-menu.js';
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from './config.js';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.116.0';
 

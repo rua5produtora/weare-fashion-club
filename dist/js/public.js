@@ -1,3 +1,4 @@
+import './mobile-menu.js';
 import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from './config.js';
 
 const root = new URL('../', import.meta.url);
